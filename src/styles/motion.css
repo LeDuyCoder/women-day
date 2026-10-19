@@ -1,0 +1,42 @@
+.petal-field {
+  position: fixed;
+  z-index: var(--z-petals);
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.petal {
+  position: absolute;
+  top: -2rem;
+  border-radius: 80% 0 80% 0;
+  background: linear-gradient(135deg, oklch(0.82 0.1 5 / 0.75), oklch(0.68 0.15 5 / 0.6));
+  will-change: transform, opacity;
+}
+
+.petal--tone-1 { background: linear-gradient(135deg, oklch(0.88 0.07 5 / 0.7), oklch(0.76 0.12 5 / 0.55)); }
+.petal--tone-2 { background: linear-gradient(135deg, oklch(0.75 0.13 5 / 0.6), oklch(0.6 0.17 8 / 0.5)); }
+
+/* Letter copy writes itself in once the paper has landed. */
+@keyframes letter-line-in {
+  from { opacity: 0; translate: 0 8px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+.letter-content > * {
+  animation: letter-line-in 550ms var(--ease-out) both;
+}
+
+.letter-content > :nth-child(1) { animation-delay: 700ms; }
+.letter-content > :nth-child(2) { animation-delay: 750ms; }
+.letter-content > :nth-child(3) { animation-delay: 900ms; }
+.letter-content > :nth-child(4) { animation-delay: 1050ms; }
+.letter-content > :nth-child(5) { animation-delay: 1200ms; }
+.letter-content > :nth-child(6) { animation-delay: 1350ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .petal-field { display: none; }
+  .letter-content > * { animation: none; }
+}

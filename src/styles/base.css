@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 3px solid oklch(0.55 0.15 10);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--wine);
+  color: white;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--rose);
+}
+
+.divider::before,
+.divider::after {
+  width: 4.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, oklch(0.75 0.09 8));
+  content: "";
+}
+
+.divider::after {
+  transform: scaleX(-1);
+}
+
+.section-title {
+  margin: 0.9rem 0 0;
+  color: var(--wine);
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.2vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.site-footer {
+  position: relative;
+  z-index: var(--z-content);
+  padding: 2rem 1rem 2.5rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.footer-note {
+  margin: 0;
+  font-family: var(--font-script);
+  font-size: 1.35rem;
+  color: var(--wine);
+}
+
+.footer-note span {
+  color: var(--rose);
+}
