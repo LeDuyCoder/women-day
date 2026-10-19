@@ -77,6 +77,8 @@
   flex-direction: column;
   align-items: center;
   padding: clamp(1.5rem, 4vw, 3rem) 1.5rem 0;
+  /* Roses, ribbon and sprig bleed past the stage; keep them from widening the page on phones. */
+  overflow-x: clip;
   isolation: isolate;
   text-align: center;
 }
