@@ -246,7 +246,7 @@ export default function EnvelopeLetter() {
               <span className="letter-sprig" aria-hidden="true" />
               <h2 className="letter-greeting">Gửi nhỏ hay báo,</h2>
               <p>20/10 tính không chúc gì đâu vì kiểu gì bạn chả nhận đủ lời chúc ngoài kia rồi, nhưng nghĩ lại vẫn nên có vài dòng riêng.</p>
-              <p>Chúc bạn luôn khỏe mạnh, bớt đau ốm dặt dẹo lại dùm cái, làm việc gì cũng suôn sẻ và sớm đạt được mấy cái mục tiêu to bự sắp tới.</p>
+              <p>Chúc bạn luôn mạnh khỏe, luôn giữ được tinh thần vui vẻ, yêu đời như hiện tại và có thật nhiều sức khỏe để tiếp tục đồng hành cùng nhau kiếm tiền trong thời gian tới.</p>
               <p>Cứ giữ cái nết bướng bỉnh đó đi, vì ít ra trong mắt tui, bạn phiên bản này là độc nhất rồi.</p>
               <p className="letter-signature">– Duy –</p>
             </div>
